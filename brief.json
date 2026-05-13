@@ -1,0 +1,287 @@
+{
+  "run_id": "run-1778632154107",
+  "job_index": 1,
+  "params": {
+    "owner_user_id": "user-1774822953462",
+    "owner_username": "admin",
+    "owner_display_name": "Administrator",
+    "count": 5,
+    "archetype": "generator",
+    "market": "France",
+    "language": "fr",
+    "country": "FR",
+    "brief": "Un générateur adaptatif pour des WODs (Workout Of the Day) variés et progressifs, adapté aux athlètes de tous…",
+    "notes": "Créez des plans d'entraînement CrossFit sur mesure basés sur le niveau de l'utilisateur, ses objectifs (force, endurance, polyvalence) et les équipements disponibles.\nS'adresse aux pratiquants de CrossFit et aux coachs. Accent sur la personnalisation et l'efficacité des exercices.",
+    "import_notes": "",
+    "growth_job_id": "",
+    "growth_slug": "",
+    "growth_kind": "",
+    "dashboard_mode": "builder",
+    "network_site_format": "forum",
+    "network_primary_topic": "",
+    "network_primary_geo": "",
+    "network_domain_pool": "forum-de-jeu.shop",
+    "network_hosting_pool": "4vps:netoper | server_id=447345 | ip=5.253.59.18 | ssh_user=root | ssh_port=22",
+    "network_dns_strategy": "auto_pool_assign",
+    "network_domain_flow": "manual",
+    "network_content_strategy": "",
+    "network_model_concept": "google/gemini-2.5-flash-lite:nitro",
+    "network_model_seo": "google/gemini-2.5-flash-lite:nitro",
+    "network_model_build": "google/gemini-2.5-flash",
+    "network_model_qa": "anthropic/claude-haiku-4.5",
+    "network_model_growth": "google/gemini-2.5-flash-lite:nitro",
+    "network_blueprint_id": "",
+    "mode": "production",
+    "run_kind": "generated_batch",
+    "publish_target": "render",
+    "requested_publish_target": "render",
+    "railway_project_id_override": "",
+    "railway_environment_id_override": "",
+    "railway_service_id_override": "",
+    "railway_service_name_override": "",
+    "github_repo_private": true,
+    "stage_models": {
+      "ideation": "google/gemini-2.5-flash-lite:nitro",
+      "spec": "google/gemini-2.5-flash",
+      "copy": "google/gemini-2.5-flash-lite:nitro",
+      "qa": "anthropic/claude-haiku-4.5",
+      "escalation": "anthropic/claude-sonnet-4.6"
+    },
+    "archetype_display": "mixed batch",
+    "archetype_mix": [
+      "generator",
+      "calculator",
+      "tool"
+    ],
+    "forced_design_theme": "signal-noir",
+    "forced_structure_preset": "bento-signal",
+    "site_idea_title": "Générateur de Plans d'Entraînement Personnalisés CrossFit",
+    "site_idea_summary": "Créez des plans d'entraînement CrossFit sur mesure basés sur le niveau de l'utilisateur, ses objectifs (force, endurance, polyvalence) et les équipements disponibles."
+  },
+  "site_spec": {
+    "slug": "generateur-de-plans-d-entrainement-personnalise-08f718ec",
+    "theme": {
+      "name": "Signal Noir",
+      "slug": "signal-noir",
+      "eyebrow": "Performance Pipeline",
+      "family": "performance-dark",
+      "moods": [
+        "performance",
+        "technical",
+        "premium",
+        "dark"
+      ],
+      "archetypes": [
+        "tool",
+        "calculator",
+        "generator"
+      ],
+      "niches": [
+        "analytics",
+        "insurance",
+        "finance",
+        "developer",
+        "qa"
+      ],
+      "keywords": [
+        "efficiency",
+        "dashboard",
+        "metrics",
+        "conversion"
+      ],
+      "token_index": [
+        "analytics",
+        "calculator",
+        "conversion",
+        "dark",
+        "dashboard",
+        "developer",
+        "efficiency",
+        "finance",
+        "generator",
+        "insurance",
+        "metrics",
+        "noir",
+        "performance",
+        "pipeline",
+        "premium",
+        "signal",
+        "technical",
+        "tool"
+      ],
+      "font_embed": "https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Space+Grotesk:wght@400;500;700&display=swap",
+      "display_font": "\"Fraunces\", serif",
+      "body_font": "\"Space Grotesk\", sans-serif",
+      "layout": "split",
+      "card_style": "glass",
+      "button_style": "glow",
+      "decor_style": "grid",
+      "hero_template": "1.08fr 0.92fr",
+      "seo_template": "1.18fr 0.82fr",
+      "feature_columns": 3,
+      "faq_columns": 3,
+      "hero_min_height": "78vh",
+      "panel_radius": "30px",
+      "card_radius": "24px",
+      "chip_radius": "999px",
+      "button_radius": "18px",
+      "outline_width": "1px",
+      "backdrop_blur": "18px",
+      "palette": {
+        "bg": "#0c0e11",
+        "surface": "rgba(18, 22, 28, 0.86)",
+        "surface_border": "rgba(255, 255, 255, 0.08)",
+        "text": "#f7f1e8",
+        "muted": "#b0aba2",
+        "accent": "#e0ff4f",
+        "accent_alt": "#2dd4bf",
+        "hero_glow": "rgba(224, 255, 79, 0.18)",
+        "button_text": "#0d1006",
+        "panel_alt": "rgba(255, 255, 255, 0.04)",
+        "shadow": "0 28px 84px rgba(0, 0, 0, 0.34)",
+        "input_fill": "rgba(255, 255, 255, 0.04)"
+      }
+    },
+    "structure": {
+      "name": "Bento Signal",
+      "slug": "bento-signal",
+      "hero_variant": "command",
+      "proof_variant": "badges",
+      "section_order": [
+        "proof",
+        "features",
+        "seo",
+        "faq"
+      ],
+      "feature_columns": 4,
+      "faq_columns": 2,
+      "family": "modular-grid",
+      "moods": [
+        "modular",
+        "curated",
+        "technical"
+      ],
+      "archetypes": [
+        "tool",
+        "generator",
+        "calculator"
+      ],
+      "niches": [
+        "ai tools",
+        "dashboards",
+        "productivity",
+        "research"
+      ],
+      "keywords": [
+        "bento",
+        "cards",
+        "signal",
+        "system"
+      ],
+      "token_index": [
+        "badges",
+        "bento",
+        "calculator",
+        "cards",
+        "command",
+        "curated",
+        "dashboards",
+        "faq",
+        "features",
+        "generator",
+        "grid",
+        "modular",
+        "productivity",
+        "proof",
+        "research",
+        "seo",
+        "signal",
+        "system",
+        "technical",
+        "tool",
+        "tools"
+      ]
+    },
+    "render_direction": "signal-bento",
+    "render_direction_name": "Signal Bento",
+    "page_blueprint": "signal-matrix",
+    "page_blueprint_name": "Signal Matrix",
+    "title": "Générateur de Plans d'Entraînement Personnalisés CrossFit",
+    "tagline": "Paramétrez votre WOD",
+    "description": "Créez des plans d",
+    "feature_prefix": "Bloc",
+    "action": "Générer le document",
+    "cta_primary": "Générer mon WOD",
+    "cta_secondary": "Consulter la FAQ",
+    "inputs": [
+      {
+        "id": "name",
+        "label": "Nom ou entreprise",
+        "type": "text",
+        "placeholder": "Studio Horizon",
+        "weight": 1.0
+      },
+      {
+        "id": "goal",
+        "label": "Objectif du document",
+        "type": "text",
+        "placeholder": "confirmation de demande",
+        "weight": 1.0
+      },
+      {
+        "id": "details",
+        "label": "Détails utiles",
+        "type": "text",
+        "placeholder": "date, montant, référence",
+        "weight": 1.0
+      }
+    ],
+    "hero_metrics": [
+      {
+        "value": "Signal Bento",
+        "label": "Cadence"
+      },
+      {
+        "value": "3",
+        "label": "Entrées"
+      },
+      {
+        "value": "Brouillon généré",
+        "label": "Sortie"
+      }
+    ],
+    "trust_labels": [
+      "Signal Bento",
+      "Générer mon WOD",
+      "Brouillon généré",
+      "Utilitaire immédiat",
+      "Structure SEO claire"
+    ],
+    "result_label": "Brouillon généré",
+    "result_unit": "",
+    "runtime_mode": "document_generator",
+    "page_variant": "console",
+    "faq_topic": "Générateur de Plans d'Entraînement Personnalisés CrossFit",
+    "faq_entries": [
+      {
+        "question": "Pourquoi utiliser cet outil pour Générateur de Plans d'Entraînement Personnalisés CrossFit ?",
+        "answer": "Il aide à cadrer le besoin rapidement et à orienter vers une prochaine action claire sur le marché France."
+      },
+      {
+        "question": "Le résultat est-il immédiat ?",
+        "answer": "Oui. L'interface est pensée pour une réponse rapide, lisible et exploitable dès la première interaction."
+      },
+      {
+        "question": "Cette page est-elle adaptée au SEO ?",
+        "answer": "Oui. La structure mélange utilité, clarté éditoriale et signaux de confiance sans surcharger l'expérience."
+      }
+    ],
+    "seo_paragraphs": [
+      "Cette page capte une intention forte autour de Générateur de Plans d'Entraînement Personnalisés CrossFit et la transforme en action utile pour un public situé sur France.",
+      "Le format hero-first accélère la compréhension, réduit les frictions et améliore la lisibilité sur mobile comme sur desktop.",
+      "Le socle reste volontairement simple pour faciliter les tests, la QA continue et les variations SEO."
+    ],
+    "document_html": "<!DOCTYPE html>\n<html lang=\"fr\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Générateur de Plans d&#x27;Entraînement Personnalisés CrossFit | Paramétrez votre WOD</title>\n    <meta name=\"description\" content=\"Créez des plans d\">\n    <style>\n        :root {\n            --dark-bg: #0d0d0d;\n            --dark-surface: #1a1a1a;\n            --text-color: #f0f0f0;\n            --accent-color: #00e676; /* A vibrant green */\n            --border-color: #333;\n            --soft-glass-bg: rgba(255, 255, 255, 0.05);\n            --soft-glass-border: rgba(255, 255, 255, 0.1);\n            --soft-glass-shadow: rgba(0, 0, 0, 0.2);\n        }\n\n        body {\n            font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Helvetica, Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\";\n            background-color: var(--dark-bg);\n            color: var(--text-color);\n            margin: 0;\n            padding: 0;\n            line-height: 1.6;\n            display: flex;\n            flex-direction: column;\n            align-items: center;\n        }\n\n        header {\n            width: 100%;\n            background-color: var(--dark-surface);\n            padding: 40px 20px;\n            text-align: center;\n            border-bottom: 1px solid var(--border-color);\n            box-shadow: 0 4px 15px var(--soft-glass-shadow);\n        }\n\n        h1 {\n            font-size: 3.5em;\n            letter-spacing: -0.05em;\n            margin-bottom: 10px;\n            color: var(--accent-color);\n            font-weight: 800;\n        }\n\n        .summary {\n            font-size: 1.2em;\n            max-width: 800px;\n            margin: 0 auto;\n            opacity: 0.8;\n        }\n\n        main {\n            width: 100%;\n            max-width: 1200px;\n            padding: 20px;\n            box-sizing: border-box;\n            display: grid;\n            grid-template-columns: 1fr;\n            gap: 40px;\n        }\n\n        section {\n            background: var(--soft-glass-bg);\n            border: 1px solid var(--soft-glass-border);\n            border-radius: 12px;\n            padding: 30px;\n            box-shadow: 0 8px 32px var(--soft-glass-shadow);\n            backdrop-filter: blur(10px);\n            -webkit-backdrop-filter: blur(10px);\n            transition: all 0.3s ease;\n        }\n\n        section:hover {\n            transform: translateY(-5px);\n            box-shadow: 0 12px 40px var(--soft-glass-shadow);\n        }\n\n        h2 {\n            font-size: 2.2em;\n            color: var(--accent-color);\n            margin-bottom: 20px;\n            text-align: center;\n        }\n\n        .form-group {\n            margin-bottom: 20px;\n        }\n\n        label {\n            display: block;\n            margin-bottom: 8px;\n            font-weight: bold;\n            color: var(--text-color);\n            opacity: 0.9;\n        }\n\n        input[type=\"range\"] {\n            width: 100%;\n            height: 8px;\n            background: var(--border-color);\n            border-radius: 5px;\n            outline: none;\n            -webkit-appearance: none;\n            appearance: none;\n            margin-top: 10px;\n        }\n\n        input[type=\"range\"]::-webkit-slider-thumb {\n            -webkit-appearance: none;\n            appearance: none;\n            width: 20px;\n            height: 20px;\n            border-radius: 50%;\n            background: var(--accent-color);\n            cursor: grab;\n            box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);\n        }\n\n        input[type=\"range\"]::-moz-range-thumb {\n            width: 20px;\n            height: 20px;\n            border-radius: 50%;\n            background: var(--accent-color);\n            cursor: grab;\n            box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);\n        }\n\n        select, input[type=\"number\"] {\n            width: 100%;\n            padding: 12px;\n            background-color: var(--dark-surface);\n            border: 1px solid var(--border-color);\n            border-radius: 8px;\n            color: var(--text-color);\n            font-size: 1em;\n            box-sizing: border-box;\n        }\n\n        select:focus, input[type=\"number\"]:focus {\n            border-color: var(--accent-color);\n            outline: none;\n            box-shadow: 0 0 0 2px rgba(0, 230, 118, 0.2);\n        }\n\n        #tool-submit {\n            display: block;\n            width: 100%;\n            padding: 15px 25px;\n            background-color: var(--accent-color);\n            color: var(--dark-bg);\n            border: none;\n            border-radius: 8px;\n            font-size: 1.2em;\n            font-weight: bold;\n            cursor: pointer;\n            transition: background-color 0.3s ease, transform 0.2s ease;\n            margin-top: 30px;\n        }\n\n        #tool-submit:hover {\n            background-color: #00c853; /* A slightly darker green */\n            transform: translateY(-2px);\n        }\n\n        #tool-result {\n            margin-top: 30px;\n            padding: 25px;\n            background: var(--soft-glass-bg);\n            border: 1px solid var(--soft-glass-border);\n            border-radius: 12px;\n            min-height: 150px;\n            box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.3);\n        }\n\n        #tool-result h3 {\n            color: var(--accent-color);\n            font-size: 1.8em;\n            margin-bottom: 15px;\n            text-align: center;\n        }\n\n        .wod-plan {\n            background-color: var(--dark-surface);\n            border-left: 5px solid var(--accent-color);\n            padding: 20px;\n            margin-bottom: 20px;\n            border-radius: 8px;\n            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);\n        }\n\n        .wod-plan h4 {\n            color: var(--text-color);\n            font-size: 1.4em;\n            margin-top: 0;\n            margin-bottom: 10px;\n        }\n\n        .wod-plan p {\n            margin: 5px 0;\n            opacity: 0.9;\n        }\n\n        .seo-section {\n            background-color: var(--dark-bg);\n            border-top: 1px solid var(--border-color);\n            padding: 60px 20px;\n            text-align: center;\n            margin-top: 60px;\n        }\n\n        .seo-section h2 {\n            font-size: 2em;\n            margin-bottom: 25px;\n            color: var(--text-color);\n        }\n\n        .seo-section p {\n            max-width: 900px;\n            margin: 0 auto 15px auto;\n            opacity: 0.7;\n        }\n\n        .seo-section ul {\n            list-style: none;\n            padding: 0;\n            max-width: 800px;\n            margin: 30px auto;\n            display: flex;\n            flex-wrap: wrap;\n            justify-content: center;\n            gap: 15px;\n        }\n\n        .seo-section li {\n            background: var(--dark-surface);\n            border: 1px solid var(--border-color);\n            padding: 10px 20px;\n            border-radius: 20px;\n            font-size: 0.9em;\n            color: var(--accent-color);\n            display: inline-block;\n            margin: 5px;\n        }\n\n        @media (min-width: 768px) {\n            main {\n                grid-template-columns: 2fr 1fr;\n            }\n            .form-section {\n                order: 1;\n            }\n            .result-section {\n                order: 2;\n            }\n        }\n        @media (max-width: 767px) {\n            h1 {\n                font-size: 2.5em;\n            }\n            .summary {\n                font-size: 1em;\n            }\n            main {\n                padding: 15px;\n            }\n            section {\n                padding: 20px;\n            }\n        }\n    </style>\n    <meta name=\"robots\" content=\"index, follow\">\n    <link rel=\"canonical\" href=\"https://generateur-de-plans-d-entrainement-personnalise-08f718ec.onrender.com\">\n    <meta property=\"og:title\" content=\"Générateur de Plans d&#x27;Entraînement Personnalisés CrossFit\">\n    <meta property=\"og:description\" content=\"Créez des plans d\">\n    <meta property=\"og:url\" content=\"https://generateur-de-plans-d-entrainement-personnalise-08f718ec.onrender.com\">\n    <meta property=\"og:type\" content=\"website\">\n    <script type=\"application/ld+json\">{\"@context\": \"https://schema.org\", \"@type\": \"WebApplication\", \"name\": \"Générateur de Plans d'Entraînement Personnalisés CrossFit\", \"description\": \"Créez des plans d\", \"url\": \"https://generateur-de-plans-d-entrainement-personnalise-08f718ec.onrender.com\", \"applicationCategory\": \"UtilityApplication\", \"operatingSystem\": \"Web Browser\"}</script>\n</head>\n<body data-site-slug=\"generateur-de-plans-d-entrainement-personnalise-08f718ec\" data-runtime-mode=\"document_generator\">\n    <header>\n        <h1>Générateur CrossFit Ultra-Personnalisé</h1>\n        <p class=\"summary\">Créez des WODs uniques et stimulants, adaptés à votre niveau, vos objectifs et votre équipement disponible. Que vous soyez un athlète chevronné ou un coach, optimisez chaque session !</p>\n    </header>\n\n    <main>\n        <section class=\"form-section\">\n            <h2>Paramétrez votre WOD</h2>\n            <form id=\"tool-form\">\n                <div class=\"form-group\">\n                    <label for=\"niveau\">Niveau de l'athlète :</label>\n                    <select id=\"niveau\" name=\"niveau\">\n                        <option value=\"débutant\">Débutant (moins de 6 mois)</option>\n                        <option value=\"intermédiaire\">Intermédiaire (6 mois - 2 ans)</option>\n                        <option value=\"avancé\">Avancé (plus de 2 ans)</option>\n                        <option value=\"élite\">Élite (compétiteur)</option>\n                    </select>\n                </div>\n\n                <div class=\"form-group\">\n                    <label for=\"objectif\">Objectif principal :</label>\n                    <select id=\"objectif\" name=\"objectif\">\n                        <option value=\"force\">Force Maximale</option>\n                        <option value=\"endurance\">Endurance Cardiovasculaire</option>\n                        <option value=\"gymnastique\">Maîtrise Gymnastique</option>\n                        <option value=\"polyvalence\">Polyvalence (GPP)</option>\n                        <option value=\"performance\">Performance Compétition</option>\n                    </select>\n                </div>\n\n                <div class=\"form-group\">\n                    <label for=\"duree\">Durée du WOD (minutes) : <span id=\"duree-val\">30</span></label>\n                    <input type=\"range\" id=\"duree\" name=\"duree\" min=\"10\" max=\"60\" value=\"30\" oninput=\"document.getElementById('duree-val').innerText = this.value;\">\n                </div>\n\n                <div class=\"form-group\">\n                    <label for=\"equipement\">Équipement disponible :</label>\n                    <select id=\"equipement\" name=\"equipement\" multiple size=\"5\">\n                        <option value=\"haltère\">Haltères</option>\n                        <option value=\"kettlebell\">Kettlebells</option>\n                        <option value=\"barre\">Barre (haltérophilie)</option>\n                        <option value=\"rameur\">Rameur</option>\n                        <option value=\"corde\">Corde à sauter</option>\n                        <option value=\"box\">Box (pliométrie)</option>\n                        <option value=\"anneaux\">Anneaux de gymnastique</option>\n                        <option value=\"barre_traction\">Barre de traction</option>\n                        <option value=\"pas_equipement\">Aucun équipement</option>\n                    </select>\n                    <small style=\"opacity: 0.7; display: block; margin-top: 5px;\">Sélectionnez plusieurs options avec Ctrl/Cmd + Clic</small>\n                </div>\n\n                <div class=\"form-group\">\n                    <label for=\"focus_partie_corps\">Focus sur une partie du corps (optionnel) :</label>\n                    <select id=\"focus_partie_corps\" name=\"focus_partie_corps\">\n                        <option value=\"aucun\">Aucun focus spécifique</option>\n                        <option value=\"haut_corps\">Haut du corps</option>\n                        <option value=\"bas_corps\">Bas du corps</option>\n                        <option value=\"core\">Core (tronc)</option>\n                    </select>\n                </div>\n\n                <button type=\"submit\" id=\"tool-submit\" data-affiliate-slot=\"generate_wod\">Générer mon WOD</button>\n            </form>\n        </section>\n\n        <section class=\"result-section\">\n            <h2>Votre WOD Personnalisé</h2>\n            <div id=\"tool-result\">\n                <p id=\"result-detail\" style=\"text-align: center; opacity: 0.7;\">Vos plans d'entraînement personnalisés apparaîtront ici.</p>\n            </div>\n        </section>\n    </main>\n\n    <section class=\"seo-section\">\n        <h2>Optimisez Votre Entraînement CrossFit avec Notre Générateur</h2>\n        <p>Que vous soyez à la recherche d'un <a href=\"#\">WOD personnalisé</a> pour développer votre force, améliorer votre endurance ou affiner votre technique gymnique, notre outil est conçu pour vous. Fini les routines génériques ! Grâce à notre <a href=\"#\">générateur de WOD</a> intelligent, créez des séances sur mesure qui tiennent compte de votre niveau (débutant, intermédiaire, avancé, élite), de vos objectifs précis et de l'équipement dont vous disposez. Idéal pour les <a href=\"#\">athlètes CrossFit</a> cherchant à progresser efficacement ou les <a href=\"#\">coachs sportifs</a> souhaitant diversifier les entraînements de leurs membres.</p>\n        <p>Découvrez comment un <a href=\"#\">plan d'entraînement CrossFit sur mesure</a> peut transformer votre performance. Notre approche se concentre sur la personnalisation pour maximiser les résultats, que ce soit pour des entraînements à la maison sans équipement ou des sessions complètes en box.</p>\n        <ul>\n            <li>Générateur WOD CrossFit</li>\n            <li>Entraînement personnalisé CrossFit</li>\n            <li>Programme WOD sur mesure</li>\n            <li>Idées WOD sans équipement</li>\n            <li>WOD force et endurance</li>\n            <li>Plan CrossFit avancé</li>\n            <li>WOD débutant CrossFit</li>\n            <li>Outil de création WOD</li>\n            <li>WOD gymnastic CrossFit</li>\n            <li>CrossFit pour coachs</li>\n        </ul>\n    </section>\n\n    <script>\n        document.getElementById('tool-form').addEventListener('submit', function(e) {\n            e.preventDefault();\n\n            const niveau = document.getElementById('niveau').value;\n            const objectif = document.getElementById('objectif').value;\n            const duree = parseInt(document.getElementById('duree').value);\n            const equipementSelect = document.getElementById('equipement');\n            const equipement = Array.from(equipementSelect.selectedOptions).map(option => option.value);\n            const focusCorps = document.getElementById('focus_partie_corps').value;\n\n            const resultDiv = document.getElementById('tool-result');\n            resultDiv.innerHTML = '<h3>Votre WOD sur mesure</h3>';\n\n            let mouvementsPossibles = {\n                \"débutant\": {\n                    \"force\": [\"Air Squat\", \"Push-up sur genoux\", \"Deadlift léger (PVC/balai)\", \"Sit-up\", \"Ring Row\"],\n                    \"endurance\": [\"Course légère\", \"Rowing (si rameur)\", \"Burpees simplifiés\", \"Mountain Climbers\", \"Sauts à la corde simples\"],\n                    \"gymnastique\": [\"Push-up sur genoux\", \"Ring Row\", \"Planche\", \"Squat au poids du corps\"],\n                    \"polyvalence\": [\"Air Squat\", \"Push-up sur genoux\", \"Sit-up\", \"Burpees simplifiés\", \"Sauts à la corde\"],\n                    \"performance\": [\"Air Squat\", \"Push-up sur genoux\", \"Deadlift léger (PVC/balai)\", \"Sit-up\", \"Ring Row\"]\n                },\n                \"intermédiaire\": {\n                    \"force\": [\"Back Squat\", \"Deadlift\", \"Shoulder Press\", \"Push-up\", \"Kettlebell Swing\"],\n                    \"endurance\": [\"Course\", \"Rowing\", \"Burpees\", \"Double Unders\", \"Box Jumps\"],\n                    \"gymnastique\": [\"Pull-up assisté\", \"Toes-to-Bar assisté\", \"Handstand Push-up (pike)\", \"Box Jumps\", \"Ring Dips assistés\"],\n                    \"polyvalence\": [\"Clean & Jerk léger\", \"Snatch léger\", \"Pull-up\", \"Push-up\", \"Wall Ball\", \"Rowing\"],\n                    \"performance\": [\"Back Squat\", \"Deadlift\", \"Shoulder Press\", \"Pull-up\", \"Toes-to-Bar\", \"Burpees\"]\n                },\n                \"avancé\": {\n                    \"force\": [\"Heavy Back Squat\", \"Heavy Deadlift\", \"Strict Press\", \"Clean & Jerk\", \"Snatch\"],\n                    \"endurance\": [\"Course longue\", \"Rowing intense\", \"Burpees over bar\", \"Double Unders rapides\", \"Assault Bike\"],\n                    \"gymnastique\": [\"Strict Pull-up\", \"Toes-to-Bar\", \"Handstand Push-up\", \"Muscle-up (anneaux/barre)\", \"Pistol Squat\"],\n                    \"polyvalence\": [\"Complexes haltérophilie\", \"Muscle-up\", \"Handstand Walk\", \"Heavy Wall Ball\", \"Rowing 500m sprint\"],\n                    \"performance\": [\"Complexes haltérophilie\", \"Gymnastique avancée\", \"Entraînements à haute intensité et volume\"]\n                },\n                \"élite\": {\n                    \"force\": [\"Max efforts (Squat, Deadlift, Oly lifts)\", \"Programmation de cycles de force lourde\"],\n                    \"endurance\": [\"Interval training haute intensité\", \"Longs MetCons (plus de 20 min)\"],\n                    \"gymnastique\": [\"One-arm Pull-ups\", \"Handstand Walk longues distances\", \"Anneaux avancés\"],\n                    \"polyvalence\": [\"WODs Hero\", \"Complexes d'haltérophilie lourds et techniques\", \"MetCons longs avec mouvements gymniques avancés\"],\n                    \"performance\": [\"Préparation spécifique compétition, gestion de la fatigue, WODs de plusieurs modalités\"]\n                }\n            };\n\n            let wodsGeneres = [];\n\n            // Base de mouvements selon l'équipement\n            let equipementMouvements = {\n                \"haltère\": [\"Goblet Squat\", \"Dumbbell Snatch\", \"Dumbbell Thruster\", \"Dumbbell Row\", \"Devil Press\"],\n                \"kettlebell\": [\"Kettlebell Swing\", \"Goblet Squat KB\", \"Kettlebell Snatch\", \"Turkish Get-up\", \"KB Clean & Jerk\"],\n                \"barre\": [\"Back Squat\", \"Deadlift\", \"Shoulder Press\", \"Clean & Jerk\", \"Snatch\", \"Overhead Squat\"],\n                \"rameur\": [\"Rowing 200m/500m/1000m\", \"Calories sur rameur\"],\n                \"corde\": [\"Single Unders\", \"Double Unders\"],\n                \"box\": [\"Box Jumps\", \"Box Step-ups\", \"Box Over\", \"Pistol Squat sur box\"],\n                \"anneaux\": [\"Ring Rows\", \"Ring Dips\", \"Muscle-ups (anneaux)\", \"Skin the Cat\"],\n                \"barre_traction\": [\"Pull-ups\", \"Toes-to-Bar\", \"Chin-ups\", \"Bar Muscle-ups\"],\n                \"pas_equipement\": [\"Air Squat\", \"Burpees\", \"Sit-ups\", \"Push-ups\", \"Lunges\", \"Mountain Climbers\", \"Plank\", \"Handstand Push-up (pike)\"]\n            };\n\n            // Filtrer les mouvements disponibles selon l'équipement\n            let mouvementsFiltres = [];\n            if (equipement.includes(\"pas_equipement\")) {\n                mouvementsFiltres = mouvementsPossibles[niveau][objectif].filter(mov => equipementMouvements[\"pas_equipement\"].includes(mov) || !Object.values(equipementMouvements).flat().includes(mov));\n            } else {\n                let tempMouvements = [];\n                for (const eq of equipement) {\n                    tempMouvements = tempMouvements.concat(equipementMouvements[eq] || []);\n                }\n                mouvementsFiltres = mouvementsPossibles[niveau][objectif].filter(mov => tempMouvements.includes(mov) || !Object.values(equipementMouvements).flat().includes(mov));\n            }\n            if (mouvementsFiltres.length === 0) { // Fallback si aucun mouvement n'est trouvé avec les filtres\n                 mouvementsFiltres = mouvementsPossibles[niveau][objectif];\n            }\n\n\n            // Mouvements spécifiques au focus corporel\n            const mouvementsCorps = {\n                \"haut_corps\": [\"Push-up\", \"Pull-up\", \"Ring Dips\", \"Shoulder Press\", \"Row\"],\n                \"bas_corps\": [\"Squat\", \"Deadlift\", \"Lunges\", \"Box Jumps\", \"Pistol Squat\"],\n                \"core\": [\"Sit-up\", \"Toes-to-Bar\", \"Plank\", \"GHD Sit-up\", \"Hollow Rock\"]\n            };\n\n            if (focusCorps !== \"aucun\") {\n                mouvementsFiltres = mouvementsFiltres.filter(mov => mouvementsCorps[focusCorps].some(focusedMov => mov.includes(focusedMov)));\n                if (mouvementsFiltres.length < 3) { // Ajouter des mouvements si pas assez filtrés\n                    mouvementsFiltres = mouvementsFiltres.concat(mouvementsCorps[focusCorps].filter(mov => !mouvementsFiltres.includes(mov)));\n                }\n            }\n\n\n            // Génération de WODs variés\n            const generateWOD = (type, duration, moves, level) => {\n                let wod = { type: type, description: [] };\n                let selectedMoves = [];\n\n                // Shuffle et prendre 3-5 mouvements pertinents\n                moves.sort(() => 0.5 - Math.random());\n                selectedMoves = moves.slice(0, Math.min(Math.floor(duration / 10) + 1, 5)); // Plus de mouvements pour plus de durée\n\n                if (selectedMoves.length === 0) {\n                    wod.description.push(\"Pas assez de mouvements disponibles avec vos critères. Essayez d'élargir les options d'équipement.\");\n                    return wod;\n                }\n\n                const repsPerMove = (base) => {\n                    if (level === \"débutant\") return base - 5;\n                    if (level === \"intermédiaire\") return base;\n                    if (level === \"avancé\") return base + 5;\n                    if (level === \"élite\") return base + 10;\n                    return base;\n                };\n\n                const rounds = Math.ceil(duration / 8); // Ajuster le nombre de rounds à la durée\n\n                if (type === \"AMRAP\") {\n                    wod.description.push(`AMRAP (As Many Rounds As Possible) en ${duration} minutes :`);\n                    wod.description.push(`  - ${repsPerMove(10)} ${selectedMoves[0] || \"Air Squats\"}`);\n                    wod.description.push(`  - ${repsPerMove(8)} ${selectedMoves[1] || \"Push-ups\"}`);\n                    if (selectedMoves[2]) wod.description.push(`  - ${repsPerMove(6)} ${selectedMoves[2]}`);\n                    if (selectedMoves[3]) wod.description.push(`  - ${repsPerMove(4)} ${selectedMoves[3]}`);\n                } else if (type === \"FOR TIME\") {\n                    wod.description.push(`FOR TIME : ${rounds} rounds de :`);\n                    wod.description.push(`  - ${repsPerMove(12)} ${selectedMoves[0] || \"Burpees\"}`);\n                    wod.description.push(`  - ${repsPerMove(10)} ${selectedMoves[1] || \"Sit-ups\"}`);\n                    if (selectedMoves[2]) wod.description.push(`  - ${repsPerMove(8)} ${selectedMoves[2]}`);\n                    if (selectedMoves[3]) wod.description.push(`  - ${repsPerMove(6)} ${selectedMoves[3]}`);\n                    wod.description.push(\"Pensez à un warmup de 5-10min avant et un cooldown de 5min après.\");\n                } else if (type === \"EMOM\") {\n                    wod.description.push(`EMOM (Every Minute On the Minute) pendant ${duration} minutes :`);\n                    wod.description.push(`  Min 1: ${repsPerMove(5)} ${selectedMoves[0] || \"Thrusters\"} (ou jusqu'à 40 sec de travail)`);\n                    wod.description.push(`  Min 2: ${repsPerMove(7)} ${selectedMoves[1] || \"Kettlebell Swings\"} (ou jusqu'à 40 sec de travail)`);\n                    if (selectedMoves[2]) wod.description.push(`  Min 3: ${repsPerMove(5)} ${selectedMoves[2]} (ou jusqu'à 40 sec de travail)`);\n                    if (selectedMoves.length >= 3) {\n                         const numMinutesPerRound = Math.min(selectedMoves.length, 3);\n                         wod.description.push(`Répétez le cycle pendant ${duration} minutes.`);\n                    }\n                } else if (type === \"Strength Focus\") {\n                    wod.description.push(`Focus Force :`);\n                    wod.description.push(`  ${selectedMoves[0] || \"Back Squat\"} : 5x5 (5 séries de 5 répétitions) à 75-85% 1RM`);\n                    wod.description.push(`  ${selectedMoves[1] || \"Deadlift\"} : 3x3 à 80-90% 1RM`);\n                    wod.description.push(`  Accessoire : 3 séries de ${repsPerMove(10)} ${selectedMoves[2] || \"Push Press\"}`);\n                }\n                 return wod;\n            };\n\n            wodsGeneres.push(generateWOD(\"AMRAP\", duree, mouvementsFiltres, niveau));\n            wodsGeneres.push(generateWOD(\"FOR TIME\", duree, mouvementsFiltres, niveau));\n            if (duree >= 15) { // EMOM est plus adapté pour des durées plus longues\n                wodsGeneres.push(generateWOD(\"EMOM\", duree, mouvementsFiltres, niveau));\n            }\n            if (objectif === \"force\") {\n                 wodsGeneres.push(generateWOD(\"Strength Focus\", duree, mouvementsFiltres, niveau));\n            }\n\n\n            if (wodsGeneres.length > 0) {\n                wodsGeneres.forEach(wod => {\n                    const wodPlanDiv = document.createElement('div');\n                    wodPlanDiv.className = 'wod-plan';\n                    const h4 = document.createElement('h4');\n                    h4.innerText = wod.type;\n                    wodPlanDiv.appendChild(h4);\n                    wod.description.forEach(line => {\n                        const p = document.createElement('p');\n                        p.innerText = line;\n                        wodPlanDiv.appendChild(p);\n                    });\n                    resultDiv.appendChild(wodPlanDiv);\n                });\n            } else {\n                resultDiv.innerHTML += '<p>Impossible de générer un WOD avec les critères sélectionnés. Veuillez ajuster vos préférences.</p>';\n            }\n        });\n    </script>\n<div id=\"qa-smoke-result\" hidden></div>\n<script id=\"farmbuilder-affiliate-helper\">\n(function () {\n  window.__UTILITY_AFFILIATE_MAP = window.__UTILITY_AFFILIATE_MAP || {};\n  document.addEventListener(\"click\", function (event) {\n    const target = event.target.closest(\"[data-affiliate-slot]\");\n    if (!target) return;\n    const slot = target.getAttribute(\"data-affiliate-slot\");\n    const href = window.__UTILITY_AFFILIATE_MAP[slot];\n    if (!href) return;\n    if (target.tagName && target.tagName.toLowerCase() === \"a\") {\n      target.setAttribute(\"href\", href);\n      target.removeAttribute(\"rel\");\n      return;\n    }\n    event.preventDefault();\n    window.open(href, \"_blank\");\n  }, true);\n})();\n</script>\n<script id=\"farmbuilder-functional-qa\">\n(function () {\n  function marker() {\n    let node = document.getElementById(\"qa-smoke-result\");\n    if (node) return node;\n    node = document.createElement(\"div\");\n    node.id = \"qa-smoke-result\";\n    node.hidden = true;\n    document.body.appendChild(node);\n    return node;\n  }\n\n  let qaFinished = false;\n  let qaWatchdog = null;\n\n  function normalize(text) {\n    return String(text || \"\").replace(/\\s+/g, \" \").trim();\n  }\n\n  function findForm() {\n    return document.getElementById(\"tool-form\") || document.querySelector(\"form\");\n  }\n\n  function findResult() {\n    return (\n      document.getElementById(\"tool-result\") ||\n      document.querySelector(\"[data-result]\") ||\n      document.querySelector(\".tool-result, .result-card, .result, .results, .output, .preview, .diagnostic, .analysis\")\n    );\n  }\n\n  function primaryAction(form) {\n    if (!form) return null;\n    return (\n      document.getElementById(\"tool-submit\") ||\n      form.querySelector(\"#tool-submit\") ||\n      form.querySelector(\"[data-primary-action]\") ||\n      form.querySelector(\"button[type=submit]\") ||\n      form.querySelector(\"button\") ||\n      form.querySelector(\"input[type=submit]\")\n    );\n  }\n\n  function resultSignature(node) {\n    if (!node) return \"\";\n    const text = normalize(node.textContent);\n    const html = normalize(node.innerHTML).slice(0, 600);\n    return `${text}||${html}`;\n  }\n\n  function resultHeadline(node) {\n    if (!node) return \"\";\n    const heading = node.querySelector(\"h1, h2, h3, strong, b\");\n    return normalize(heading ? heading.textContent : \"\");\n  }\n\n  function sampleText(field) {\n    const key = `${field.id || \"\"} ${field.name || \"\"} ${field.placeholder || \"\"}`.toLowerCase();\n    if (/email/.test(key)) return \"bonjour@example.com\";\n    if (/url|site|website|lien/.test(key)) return \"https://example.com/offre-solaire\";\n    if (/phone|tel|mobile/.test(key)) return \"0612345678\";\n    if (/ville|city|localisation|location|region|departement|postal/.test(key)) return \"Paris\";\n    if (/orientation/.test(key)) return \"sud\";\n    if (/keyword|theme|topic|sujet|subject/.test(key)) return \"energie solaire domestique\";\n    if (/titre|title/.test(key)) return \"Simulateur solaire maison\";\n    if (/nom|name|project/.test(key)) return \"Projet Horizon\";\n    if (/description|notes|content|message/.test(key)) return \"Maison individuelle exposee sud avec toiture exploitable.\";\n    return field.placeholder || \"France\";\n  }\n\n  function sampleNumber(field) {\n    const key = `${field.id || \"\"} ${field.name || \"\"}`.toLowerCase();\n    if (/inclinaison|angle|slope/.test(key)) return \"30\";\n    if (/surface|size|m2|sqm/.test(key)) return \"28\";\n    if (/annee|year/.test(key)) return \"2024\";\n    if (/prix|price|budget|cost|amount|montant/.test(key)) return \"12000\";\n    const min = Number(field.min || \"\");\n    const max = Number(field.max || \"\");\n    if (Number.isFinite(min) && Number.isFinite(max) && max >= min) {\n      return String(Math.min(max, Math.max(min, min + Math.round((max - min) * 0.35))));\n    }\n    if (Number.isFinite(min)) return String(Math.max(min, 12));\n    if (Number.isFinite(max)) return String(Math.min(max, 12));\n    return field.value || \"12\";\n  }\n\n  function applySample(field) {\n    const tag = (field.tagName || \"\").toLowerCase();\n    const type = (field.type || \"\").toLowerCase();\n    if (field.disabled) return;\n    if (type === \"hidden\" || type === \"submit\" || type === \"button\" || type === \"reset\" || type === \"image\" || type === \"file\") {\n      return;\n    }\n    const currentValue = normalize(field.value);\n    if (tag === \"select\") {\n      if (currentValue) return;\n      const option = Array.from(field.options || []).find((item) => item.value && !item.disabled) || field.options[0];\n      if (option) field.value = option.value;\n      return;\n    }\n    if (type === \"checkbox\") {\n      if (field.checked) return;\n      field.checked = true;\n      return;\n    }\n    if (type === \"radio\") {\n      if (field.checked) return;\n      field.checked = true;\n      return;\n    }\n    if (type === \"date\") {\n      if (currentValue) return;\n      field.value = \"2026-03-01\";\n      return;\n    }\n    if (type === \"email\") {\n      if (currentValue) return;\n      field.value = \"bonjour@example.com\";\n      return;\n    }\n    if (type === \"url\") {\n      if (currentValue) return;\n      field.value = \"https://example.com/offre-solaire\";\n      return;\n    }\n    if (type === \"tel\") {\n      if (currentValue) return;\n      field.value = \"0612345678\";\n      return;\n    }\n    if (type === \"color\") {\n      if (currentValue) return;\n      field.value = \"#2f855a\";\n      return;\n    }\n    if (type === \"number\" || type === \"range\") {\n      if (currentValue) return;\n      field.value = sampleNumber(field);\n      return;\n    }\n    if (currentValue) return;\n    field.value = sampleText(field);\n  }\n\n  function stamp(status, detail, headline, primary) {\n    if (qaFinished) return;\n    qaFinished = true;\n    if (qaWatchdog) {\n      window.clearTimeout(qaWatchdog);\n      qaWatchdog = null;\n    }\n    const node = marker();\n    node.dataset.status = status;\n    node.dataset.mode = \"native-form\";\n    node.dataset.detail = detail || \"\";\n    node.dataset.headline = headline || \"\";\n    node.dataset.primary = primary || \"\";\n    node.dataset.viewport = window.innerWidth <= 640 ? \"mobile\" : \"desktop\";\n    window.setTimeout(function () {\n      try {\n        window.stop();\n      } catch (_error) {}\n    }, 0);\n  }\n\n  function installModalGuards() {\n    const noop = function () {};\n    const approve = function () { return true; };\n    const empty = function () { return \"\"; };\n    try { window.alert = noop; } catch (_error) {}\n    try { window.confirm = approve; } catch (_error) {}\n    try { window.prompt = empty; } catch (_error) {}\n  }\n\n  function triggerAction(form, action) {\n    try {\n      if (typeof form.requestSubmit === \"function\") {\n        form.requestSubmit(action || undefined);\n        return;\n      }\n    } catch (_error) {}\n    if (action && typeof action.click === \"function\") {\n      action.click();\n      return;\n    }\n    form.dispatchEvent(new Event(\"submit\", { bubbles: true, cancelable: true }));\n  }\n\n  function inspectResult(before, attemptsLeft) {\n    const result = findResult();\n    if (!result) {\n      stamp(\"fail\", \"La zone de resultat est introuvable.\", \"\");\n      return;\n    }\n    const after = resultSignature(result);\n    const text = normalize(result.textContent);\n    if (after && after !== before && text.length >= 24) {\n      const primary = result.querySelector(\"a[href], button[data-href], [data-primary-url]\") || document.querySelector(\"#tool-result a[href]\");\n      stamp(\"pass\", \"Le formulaire natif a mis a jour la zone de resultat.\", resultHeadline(result), primary ? (primary.getAttribute(\"href\") || primary.getAttribute(\"data-primary-url\") || \"\") : \"\");\n      return;\n    }\n    if (attemptsLeft > 0) {\n      window.setTimeout(function () {\n        inspectResult(before, attemptsLeft - 1);\n      }, 250);\n      return;\n    }\n    stamp(\"fail\", \"La zone de resultat n'a pas renvoye de contenu exploitable.\", resultHeadline(result));\n  }\n\n  function runSmoke() {\n    const params = new URLSearchParams(window.location.search);\n    if (params.get(\"__qa\") !== \"functional\") return;\n    qaWatchdog = window.setTimeout(function () {\n      stamp(\"fail\", \"QA smoke timed out before the page reported a usable result.\", \"\");\n    }, 7000);\n    const form = findForm();\n    if (!form) {\n      stamp(\"fail\", \"Le formulaire principal est introuvable.\", \"\");\n      return;\n    }\n    const result = findResult();\n    const before = resultSignature(result);\n    installModalGuards();\n    try {\n      form.querySelectorAll(\"input, select, textarea\").forEach(applySample);\n    } catch (error) {\n      stamp(\"fail\", error && error.message ? `QA smoke sample failed: ${error.message}` : \"QA smoke sample failed before submit.\", \"\");\n      return;\n    }\n    const action = primaryAction(form);\n    try {\n      triggerAction(form, action);\n    } catch (error) {\n      stamp(\"fail\", error && error.message ? `QA smoke submit failed: ${error.message}` : \"QA smoke submit failed.\", \"\");\n      return;\n    }\n    inspectResult(before, 10);\n  }\n\n  window.addEventListener(\"error\", function (event) {\n    const message = event && event.message ? event.message : \"JavaScript runtime error during QA smoke.\";\n    stamp(\"fail\", `QA smoke JS error: ${message}`, \"\");\n  }, { once: true });\n\n  window.addEventListener(\"unhandledrejection\", function (event) {\n    const reason = event && event.reason;\n    const detail = typeof reason === \"string\"\n      ? reason\n      : reason && reason.message\n        ? reason.message\n        : \"Unhandled promise rejection during QA smoke.\";\n    stamp(\"fail\", `QA smoke rejection: ${detail}`, \"\");\n  }, { once: true });\n\n  if (document.readyState === \"loading\") {\n    document.addEventListener(\"DOMContentLoaded\", function () {\n      window.setTimeout(runSmoke, 60);\n    }, { once: true });\n  } else {\n    window.setTimeout(runSmoke, 60);\n  }\n})();\n</script>\n</body>\n</html>",
+    "generation_mode": "direct_html"
+  }
+}
