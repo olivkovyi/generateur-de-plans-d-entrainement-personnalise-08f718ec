@@ -1,0 +1,40 @@
+{
+  "name": "Générateur de Plans d'Entraînement Personnalisés CrossFit",
+  "description": "Créez des plans d",
+  "theme": "generator",
+  "design_theme": "signal-noir",
+  "structure_preset": "bento-signal",
+  "render_direction": "signal-bento",
+  "page_blueprint": "signal-matrix",
+  "language": "fr",
+  "country": "FR",
+  "url": null,
+  "expected_url": "https://generateur-de-plans-d-entrainement-personnalise-08f718ec.onrender.com",
+  "created": "2026-05-13T00:29:52.293022+00:00",
+  "owner_user_id": "user-1774822953462",
+  "owner_username": "admin",
+  "owner_display_name": "Administrator",
+  "status": "generated",
+  "run_id": "run-1778632154107",
+  "publish_target": "render",
+  "mode": "production",
+  "github": {
+    "status": "pending"
+  },
+  "deployment": {
+    "status": "pending"
+  },
+  "qa": {
+    "status": "pending"
+  },
+  "features": [
+    "Hero pattern: command",
+    "Proof module: badges",
+    "Design theme: Signal Noir",
+    "Render direction: Signal Bento",
+    "Page blueprint: Signal Matrix",
+    "Runtime mode: document_generator",
+    "Generation mode: direct_html",
+    "Artifact rendered, awaiting QA and deployment"
+  ]
+}
