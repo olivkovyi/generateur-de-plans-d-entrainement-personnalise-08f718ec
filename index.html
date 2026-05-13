@@ -1,0 +1,835 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Générateur de Plans d&#x27;Entraînement Personnalisés CrossFit | Paramétrez votre WOD</title>
+    <meta name="description" content="Créez des plans d">
+    <style>
+        :root {
+            --dark-bg: #0d0d0d;
+            --dark-surface: #1a1a1a;
+            --text-color: #f0f0f0;
+            --accent-color: #00e676; /* A vibrant green */
+            --border-color: #333;
+            --soft-glass-bg: rgba(255, 255, 255, 0.05);
+            --soft-glass-border: rgba(255, 255, 255, 0.1);
+            --soft-glass-shadow: rgba(0, 0, 0, 0.2);
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+            background-color: var(--dark-bg);
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        header {
+            width: 100%;
+            background-color: var(--dark-surface);
+            padding: 40px 20px;
+            text-align: center;
+            border-bottom: 1px solid var(--border-color);
+            box-shadow: 0 4px 15px var(--soft-glass-shadow);
+        }
+
+        h1 {
+            font-size: 3.5em;
+            letter-spacing: -0.05em;
+            margin-bottom: 10px;
+            color: var(--accent-color);
+            font-weight: 800;
+        }
+
+        .summary {
+            font-size: 1.2em;
+            max-width: 800px;
+            margin: 0 auto;
+            opacity: 0.8;
+        }
+
+        main {
+            width: 100%;
+            max-width: 1200px;
+            padding: 20px;
+            box-sizing: border-box;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 40px;
+        }
+
+        section {
+            background: var(--soft-glass-bg);
+            border: 1px solid var(--soft-glass-border);
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 8px 32px var(--soft-glass-shadow);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+        }
+
+        section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 40px var(--soft-glass-shadow);
+        }
+
+        h2 {
+            font-size: 2.2em;
+            color: var(--accent-color);
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: var(--text-color);
+            opacity: 0.9;
+        }
+
+        input[type="range"] {
+            width: 100%;
+            height: 8px;
+            background: var(--border-color);
+            border-radius: 5px;
+            outline: none;
+            -webkit-appearance: none;
+            appearance: none;
+            margin-top: 10px;
+        }
+
+        input[type="range"]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: var(--accent-color);
+            cursor: grab;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+        }
+
+        input[type="range"]::-moz-range-thumb {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: var(--accent-color);
+            cursor: grab;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+        }
+
+        select, input[type="number"] {
+            width: 100%;
+            padding: 12px;
+            background-color: var(--dark-surface);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            color: var(--text-color);
+            font-size: 1em;
+            box-sizing: border-box;
+        }
+
+        select:focus, input[type="number"]:focus {
+            border-color: var(--accent-color);
+            outline: none;
+            box-shadow: 0 0 0 2px rgba(0, 230, 118, 0.2);
+        }
+
+        #tool-submit {
+            display: block;
+            width: 100%;
+            padding: 15px 25px;
+            background-color: var(--accent-color);
+            color: var(--dark-bg);
+            border: none;
+            border-radius: 8px;
+            font-size: 1.2em;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            margin-top: 30px;
+        }
+
+        #tool-submit:hover {
+            background-color: #00c853; /* A slightly darker green */
+            transform: translateY(-2px);
+        }
+
+        #tool-result {
+            margin-top: 30px;
+            padding: 25px;
+            background: var(--soft-glass-bg);
+            border: 1px solid var(--soft-glass-border);
+            border-radius: 12px;
+            min-height: 150px;
+            box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.3);
+        }
+
+        #tool-result h3 {
+            color: var(--accent-color);
+            font-size: 1.8em;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .wod-plan {
+            background-color: var(--dark-surface);
+            border-left: 5px solid var(--accent-color);
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .wod-plan h4 {
+            color: var(--text-color);
+            font-size: 1.4em;
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+
+        .wod-plan p {
+            margin: 5px 0;
+            opacity: 0.9;
+        }
+
+        .seo-section {
+            background-color: var(--dark-bg);
+            border-top: 1px solid var(--border-color);
+            padding: 60px 20px;
+            text-align: center;
+            margin-top: 60px;
+        }
+
+        .seo-section h2 {
+            font-size: 2em;
+            margin-bottom: 25px;
+            color: var(--text-color);
+        }
+
+        .seo-section p {
+            max-width: 900px;
+            margin: 0 auto 15px auto;
+            opacity: 0.7;
+        }
+
+        .seo-section ul {
+            list-style: none;
+            padding: 0;
+            max-width: 800px;
+            margin: 30px auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .seo-section li {
+            background: var(--dark-surface);
+            border: 1px solid var(--border-color);
+            padding: 10px 20px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            color: var(--accent-color);
+            display: inline-block;
+            margin: 5px;
+        }
+
+        @media (min-width: 768px) {
+            main {
+                grid-template-columns: 2fr 1fr;
+            }
+            .form-section {
+                order: 1;
+            }
+            .result-section {
+                order: 2;
+            }
+        }
+        @media (max-width: 767px) {
+            h1 {
+                font-size: 2.5em;
+            }
+            .summary {
+                font-size: 1em;
+            }
+            main {
+                padding: 15px;
+            }
+            section {
+                padding: 20px;
+            }
+        }
+    </style>
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://generateur-de-plans-d-entrainement-personnalise-08f718ec.onrender.com">
+    <meta property="og:title" content="Générateur de Plans d&#x27;Entraînement Personnalisés CrossFit">
+    <meta property="og:description" content="Créez des plans d">
+    <meta property="og:url" content="https://generateur-de-plans-d-entrainement-personnalise-08f718ec.onrender.com">
+    <meta property="og:type" content="website">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Générateur de Plans d'Entraînement Personnalisés CrossFit", "description": "Créez des plans d", "url": "https://generateur-de-plans-d-entrainement-personnalise-08f718ec.onrender.com", "applicationCategory": "UtilityApplication", "operatingSystem": "Web Browser"}</script>
+</head>
+<body data-site-slug="generateur-de-plans-d-entrainement-personnalise-08f718ec" data-runtime-mode="document_generator">
+    <header>
+        <h1>Générateur CrossFit Ultra-Personnalisé</h1>
+        <p class="summary">Créez des WODs uniques et stimulants, adaptés à votre niveau, vos objectifs et votre équipement disponible. Que vous soyez un athlète chevronné ou un coach, optimisez chaque session !</p>
+    </header>
+
+    <main>
+        <section class="form-section">
+            <h2>Paramétrez votre WOD</h2>
+            <form id="tool-form">
+                <div class="form-group">
+                    <label for="niveau">Niveau de l'athlète :</label>
+                    <select id="niveau" name="niveau">
+                        <option value="débutant">Débutant (moins de 6 mois)</option>
+                        <option value="intermédiaire">Intermédiaire (6 mois - 2 ans)</option>
+                        <option value="avancé">Avancé (plus de 2 ans)</option>
+                        <option value="élite">Élite (compétiteur)</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="objectif">Objectif principal :</label>
+                    <select id="objectif" name="objectif">
+                        <option value="force">Force Maximale</option>
+                        <option value="endurance">Endurance Cardiovasculaire</option>
+                        <option value="gymnastique">Maîtrise Gymnastique</option>
+                        <option value="polyvalence">Polyvalence (GPP)</option>
+                        <option value="performance">Performance Compétition</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="duree">Durée du WOD (minutes) : <span id="duree-val">30</span></label>
+                    <input type="range" id="duree" name="duree" min="10" max="60" value="30" oninput="document.getElementById('duree-val').innerText = this.value;">
+                </div>
+
+                <div class="form-group">
+                    <label for="equipement">Équipement disponible :</label>
+                    <select id="equipement" name="equipement" multiple size="5">
+                        <option value="haltère">Haltères</option>
+                        <option value="kettlebell">Kettlebells</option>
+                        <option value="barre">Barre (haltérophilie)</option>
+                        <option value="rameur">Rameur</option>
+                        <option value="corde">Corde à sauter</option>
+                        <option value="box">Box (pliométrie)</option>
+                        <option value="anneaux">Anneaux de gymnastique</option>
+                        <option value="barre_traction">Barre de traction</option>
+                        <option value="pas_equipement">Aucun équipement</option>
+                    </select>
+                    <small style="opacity: 0.7; display: block; margin-top: 5px;">Sélectionnez plusieurs options avec Ctrl/Cmd + Clic</small>
+                </div>
+
+                <div class="form-group">
+                    <label for="focus_partie_corps">Focus sur une partie du corps (optionnel) :</label>
+                    <select id="focus_partie_corps" name="focus_partie_corps">
+                        <option value="aucun">Aucun focus spécifique</option>
+                        <option value="haut_corps">Haut du corps</option>
+                        <option value="bas_corps">Bas du corps</option>
+                        <option value="core">Core (tronc)</option>
+                    </select>
+                </div>
+
+                <button type="submit" id="tool-submit" data-affiliate-slot="generate_wod">Générer mon WOD</button>
+            </form>
+        </section>
+
+        <section class="result-section">
+            <h2>Votre WOD Personnalisé</h2>
+            <div id="tool-result">
+                <p id="result-detail" style="text-align: center; opacity: 0.7;">Vos plans d'entraînement personnalisés apparaîtront ici.</p>
+            </div>
+        </section>
+    </main>
+
+    <section class="seo-section">
+        <h2>Optimisez Votre Entraînement CrossFit avec Notre Générateur</h2>
+        <p>Que vous soyez à la recherche d'un <a href="#">WOD personnalisé</a> pour développer votre force, améliorer votre endurance ou affiner votre technique gymnique, notre outil est conçu pour vous. Fini les routines génériques ! Grâce à notre <a href="#">générateur de WOD</a> intelligent, créez des séances sur mesure qui tiennent compte de votre niveau (débutant, intermédiaire, avancé, élite), de vos objectifs précis et de l'équipement dont vous disposez. Idéal pour les <a href="#">athlètes CrossFit</a> cherchant à progresser efficacement ou les <a href="#">coachs sportifs</a> souhaitant diversifier les entraînements de leurs membres.</p>
+        <p>Découvrez comment un <a href="#">plan d'entraînement CrossFit sur mesure</a> peut transformer votre performance. Notre approche se concentre sur la personnalisation pour maximiser les résultats, que ce soit pour des entraînements à la maison sans équipement ou des sessions complètes en box.</p>
+        <ul>
+            <li>Générateur WOD CrossFit</li>
+            <li>Entraînement personnalisé CrossFit</li>
+            <li>Programme WOD sur mesure</li>
+            <li>Idées WOD sans équipement</li>
+            <li>WOD force et endurance</li>
+            <li>Plan CrossFit avancé</li>
+            <li>WOD débutant CrossFit</li>
+            <li>Outil de création WOD</li>
+            <li>WOD gymnastic CrossFit</li>
+            <li>CrossFit pour coachs</li>
+        </ul>
+    </section>
+
+    <script>
+        document.getElementById('tool-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const niveau = document.getElementById('niveau').value;
+            const objectif = document.getElementById('objectif').value;
+            const duree = parseInt(document.getElementById('duree').value);
+            const equipementSelect = document.getElementById('equipement');
+            const equipement = Array.from(equipementSelect.selectedOptions).map(option => option.value);
+            const focusCorps = document.getElementById('focus_partie_corps').value;
+
+            const resultDiv = document.getElementById('tool-result');
+            resultDiv.innerHTML = '<h3>Votre WOD sur mesure</h3>';
+
+            let mouvementsPossibles = {
+                "débutant": {
+                    "force": ["Air Squat", "Push-up sur genoux", "Deadlift léger (PVC/balai)", "Sit-up", "Ring Row"],
+                    "endurance": ["Course légère", "Rowing (si rameur)", "Burpees simplifiés", "Mountain Climbers", "Sauts à la corde simples"],
+                    "gymnastique": ["Push-up sur genoux", "Ring Row", "Planche", "Squat au poids du corps"],
+                    "polyvalence": ["Air Squat", "Push-up sur genoux", "Sit-up", "Burpees simplifiés", "Sauts à la corde"],
+                    "performance": ["Air Squat", "Push-up sur genoux", "Deadlift léger (PVC/balai)", "Sit-up", "Ring Row"]
+                },
+                "intermédiaire": {
+                    "force": ["Back Squat", "Deadlift", "Shoulder Press", "Push-up", "Kettlebell Swing"],
+                    "endurance": ["Course", "Rowing", "Burpees", "Double Unders", "Box Jumps"],
+                    "gymnastique": ["Pull-up assisté", "Toes-to-Bar assisté", "Handstand Push-up (pike)", "Box Jumps", "Ring Dips assistés"],
+                    "polyvalence": ["Clean & Jerk léger", "Snatch léger", "Pull-up", "Push-up", "Wall Ball", "Rowing"],
+                    "performance": ["Back Squat", "Deadlift", "Shoulder Press", "Pull-up", "Toes-to-Bar", "Burpees"]
+                },
+                "avancé": {
+                    "force": ["Heavy Back Squat", "Heavy Deadlift", "Strict Press", "Clean & Jerk", "Snatch"],
+                    "endurance": ["Course longue", "Rowing intense", "Burpees over bar", "Double Unders rapides", "Assault Bike"],
+                    "gymnastique": ["Strict Pull-up", "Toes-to-Bar", "Handstand Push-up", "Muscle-up (anneaux/barre)", "Pistol Squat"],
+                    "polyvalence": ["Complexes haltérophilie", "Muscle-up", "Handstand Walk", "Heavy Wall Ball", "Rowing 500m sprint"],
+                    "performance": ["Complexes haltérophilie", "Gymnastique avancée", "Entraînements à haute intensité et volume"]
+                },
+                "élite": {
+                    "force": ["Max efforts (Squat, Deadlift, Oly lifts)", "Programmation de cycles de force lourde"],
+                    "endurance": ["Interval training haute intensité", "Longs MetCons (plus de 20 min)"],
+                    "gymnastique": ["One-arm Pull-ups", "Handstand Walk longues distances", "Anneaux avancés"],
+                    "polyvalence": ["WODs Hero", "Complexes d'haltérophilie lourds et techniques", "MetCons longs avec mouvements gymniques avancés"],
+                    "performance": ["Préparation spécifique compétition, gestion de la fatigue, WODs de plusieurs modalités"]
+                }
+            };
+
+            let wodsGeneres = [];
+
+            // Base de mouvements selon l'équipement
+            let equipementMouvements = {
+                "haltère": ["Goblet Squat", "Dumbbell Snatch", "Dumbbell Thruster", "Dumbbell Row", "Devil Press"],
+                "kettlebell": ["Kettlebell Swing", "Goblet Squat KB", "Kettlebell Snatch", "Turkish Get-up", "KB Clean & Jerk"],
+                "barre": ["Back Squat", "Deadlift", "Shoulder Press", "Clean & Jerk", "Snatch", "Overhead Squat"],
+                "rameur": ["Rowing 200m/500m/1000m", "Calories sur rameur"],
+                "corde": ["Single Unders", "Double Unders"],
+                "box": ["Box Jumps", "Box Step-ups", "Box Over", "Pistol Squat sur box"],
+                "anneaux": ["Ring Rows", "Ring Dips", "Muscle-ups (anneaux)", "Skin the Cat"],
+                "barre_traction": ["Pull-ups", "Toes-to-Bar", "Chin-ups", "Bar Muscle-ups"],
+                "pas_equipement": ["Air Squat", "Burpees", "Sit-ups", "Push-ups", "Lunges", "Mountain Climbers", "Plank", "Handstand Push-up (pike)"]
+            };
+
+            // Filtrer les mouvements disponibles selon l'équipement
+            let mouvementsFiltres = [];
+            if (equipement.includes("pas_equipement")) {
+                mouvementsFiltres = mouvementsPossibles[niveau][objectif].filter(mov => equipementMouvements["pas_equipement"].includes(mov) || !Object.values(equipementMouvements).flat().includes(mov));
+            } else {
+                let tempMouvements = [];
+                for (const eq of equipement) {
+                    tempMouvements = tempMouvements.concat(equipementMouvements[eq] || []);
+                }
+                mouvementsFiltres = mouvementsPossibles[niveau][objectif].filter(mov => tempMouvements.includes(mov) || !Object.values(equipementMouvements).flat().includes(mov));
+            }
+            if (mouvementsFiltres.length === 0) { // Fallback si aucun mouvement n'est trouvé avec les filtres
+                 mouvementsFiltres = mouvementsPossibles[niveau][objectif];
+            }
+
+
+            // Mouvements spécifiques au focus corporel
+            const mouvementsCorps = {
+                "haut_corps": ["Push-up", "Pull-up", "Ring Dips", "Shoulder Press", "Row"],
+                "bas_corps": ["Squat", "Deadlift", "Lunges", "Box Jumps", "Pistol Squat"],
+                "core": ["Sit-up", "Toes-to-Bar", "Plank", "GHD Sit-up", "Hollow Rock"]
+            };
+
+            if (focusCorps !== "aucun") {
+                mouvementsFiltres = mouvementsFiltres.filter(mov => mouvementsCorps[focusCorps].some(focusedMov => mov.includes(focusedMov)));
+                if (mouvementsFiltres.length < 3) { // Ajouter des mouvements si pas assez filtrés
+                    mouvementsFiltres = mouvementsFiltres.concat(mouvementsCorps[focusCorps].filter(mov => !mouvementsFiltres.includes(mov)));
+                }
+            }
+
+
+            // Génération de WODs variés
+            const generateWOD = (type, duration, moves, level) => {
+                let wod = { type: type, description: [] };
+                let selectedMoves = [];
+
+                // Shuffle et prendre 3-5 mouvements pertinents
+                moves.sort(() => 0.5 - Math.random());
+                selectedMoves = moves.slice(0, Math.min(Math.floor(duration / 10) + 1, 5)); // Plus de mouvements pour plus de durée
+
+                if (selectedMoves.length === 0) {
+                    wod.description.push("Pas assez de mouvements disponibles avec vos critères. Essayez d'élargir les options d'équipement.");
+                    return wod;
+                }
+
+                const repsPerMove = (base) => {
+                    if (level === "débutant") return base - 5;
+                    if (level === "intermédiaire") return base;
+                    if (level === "avancé") return base + 5;
+                    if (level === "élite") return base + 10;
+                    return base;
+                };
+
+                const rounds = Math.ceil(duration / 8); // Ajuster le nombre de rounds à la durée
+
+                if (type === "AMRAP") {
+                    wod.description.push(`AMRAP (As Many Rounds As Possible) en ${duration} minutes :`);
+                    wod.description.push(`  - ${repsPerMove(10)} ${selectedMoves[0] || "Air Squats"}`);
+                    wod.description.push(`  - ${repsPerMove(8)} ${selectedMoves[1] || "Push-ups"}`);
+                    if (selectedMoves[2]) wod.description.push(`  - ${repsPerMove(6)} ${selectedMoves[2]}`);
+                    if (selectedMoves[3]) wod.description.push(`  - ${repsPerMove(4)} ${selectedMoves[3]}`);
+                } else if (type === "FOR TIME") {
+                    wod.description.push(`FOR TIME : ${rounds} rounds de :`);
+                    wod.description.push(`  - ${repsPerMove(12)} ${selectedMoves[0] || "Burpees"}`);
+                    wod.description.push(`  - ${repsPerMove(10)} ${selectedMoves[1] || "Sit-ups"}`);
+                    if (selectedMoves[2]) wod.description.push(`  - ${repsPerMove(8)} ${selectedMoves[2]}`);
+                    if (selectedMoves[3]) wod.description.push(`  - ${repsPerMove(6)} ${selectedMoves[3]}`);
+                    wod.description.push("Pensez à un warmup de 5-10min avant et un cooldown de 5min après.");
+                } else if (type === "EMOM") {
+                    wod.description.push(`EMOM (Every Minute On the Minute) pendant ${duration} minutes :`);
+                    wod.description.push(`  Min 1: ${repsPerMove(5)} ${selectedMoves[0] || "Thrusters"} (ou jusqu'à 40 sec de travail)`);
+                    wod.description.push(`  Min 2: ${repsPerMove(7)} ${selectedMoves[1] || "Kettlebell Swings"} (ou jusqu'à 40 sec de travail)`);
+                    if (selectedMoves[2]) wod.description.push(`  Min 3: ${repsPerMove(5)} ${selectedMoves[2]} (ou jusqu'à 40 sec de travail)`);
+                    if (selectedMoves.length >= 3) {
+                         const numMinutesPerRound = Math.min(selectedMoves.length, 3);
+                         wod.description.push(`Répétez le cycle pendant ${duration} minutes.`);
+                    }
+                } else if (type === "Strength Focus") {
+                    wod.description.push(`Focus Force :`);
+                    wod.description.push(`  ${selectedMoves[0] || "Back Squat"} : 5x5 (5 séries de 5 répétitions) à 75-85% 1RM`);
+                    wod.description.push(`  ${selectedMoves[1] || "Deadlift"} : 3x3 à 80-90% 1RM`);
+                    wod.description.push(`  Accessoire : 3 séries de ${repsPerMove(10)} ${selectedMoves[2] || "Push Press"}`);
+                }
+                 return wod;
+            };
+
+            wodsGeneres.push(generateWOD("AMRAP", duree, mouvementsFiltres, niveau));
+            wodsGeneres.push(generateWOD("FOR TIME", duree, mouvementsFiltres, niveau));
+            if (duree >= 15) { // EMOM est plus adapté pour des durées plus longues
+                wodsGeneres.push(generateWOD("EMOM", duree, mouvementsFiltres, niveau));
+            }
+            if (objectif === "force") {
+                 wodsGeneres.push(generateWOD("Strength Focus", duree, mouvementsFiltres, niveau));
+            }
+
+
+            if (wodsGeneres.length > 0) {
+                wodsGeneres.forEach(wod => {
+                    const wodPlanDiv = document.createElement('div');
+                    wodPlanDiv.className = 'wod-plan';
+                    const h4 = document.createElement('h4');
+                    h4.innerText = wod.type;
+                    wodPlanDiv.appendChild(h4);
+                    wod.description.forEach(line => {
+                        const p = document.createElement('p');
+                        p.innerText = line;
+                        wodPlanDiv.appendChild(p);
+                    });
+                    resultDiv.appendChild(wodPlanDiv);
+                });
+            } else {
+                resultDiv.innerHTML += '<p>Impossible de générer un WOD avec les critères sélectionnés. Veuillez ajuster vos préférences.</p>';
+            }
+        });
+    </script>
+<div id="qa-smoke-result" hidden></div>
+<script id="farmbuilder-affiliate-helper">
+(function () {
+  window.__UTILITY_AFFILIATE_MAP = window.__UTILITY_AFFILIATE_MAP || {};
+  document.addEventListener("click", function (event) {
+    const target = event.target.closest("[data-affiliate-slot]");
+    if (!target) return;
+    const slot = target.getAttribute("data-affiliate-slot");
+    const href = window.__UTILITY_AFFILIATE_MAP[slot];
+    if (!href) return;
+    if (target.tagName && target.tagName.toLowerCase() === "a") {
+      target.setAttribute("href", href);
+      target.removeAttribute("rel");
+      return;
+    }
+    event.preventDefault();
+    window.open(href, "_blank");
+  }, true);
+})();
+</script>
+<script id="farmbuilder-functional-qa">
+(function () {
+  function marker() {
+    let node = document.getElementById("qa-smoke-result");
+    if (node) return node;
+    node = document.createElement("div");
+    node.id = "qa-smoke-result";
+    node.hidden = true;
+    document.body.appendChild(node);
+    return node;
+  }
+
+  let qaFinished = false;
+  let qaWatchdog = null;
+
+  function normalize(text) {
+    return String(text || "").replace(/\s+/g, " ").trim();
+  }
+
+  function findForm() {
+    return document.getElementById("tool-form") || document.querySelector("form");
+  }
+
+  function findResult() {
+    return (
+      document.getElementById("tool-result") ||
+      document.querySelector("[data-result]") ||
+      document.querySelector(".tool-result, .result-card, .result, .results, .output, .preview, .diagnostic, .analysis")
+    );
+  }
+
+  function primaryAction(form) {
+    if (!form) return null;
+    return (
+      document.getElementById("tool-submit") ||
+      form.querySelector("#tool-submit") ||
+      form.querySelector("[data-primary-action]") ||
+      form.querySelector("button[type=submit]") ||
+      form.querySelector("button") ||
+      form.querySelector("input[type=submit]")
+    );
+  }
+
+  function resultSignature(node) {
+    if (!node) return "";
+    const text = normalize(node.textContent);
+    const html = normalize(node.innerHTML).slice(0, 600);
+    return `${text}||${html}`;
+  }
+
+  function resultHeadline(node) {
+    if (!node) return "";
+    const heading = node.querySelector("h1, h2, h3, strong, b");
+    return normalize(heading ? heading.textContent : "");
+  }
+
+  function sampleText(field) {
+    const key = `${field.id || ""} ${field.name || ""} ${field.placeholder || ""}`.toLowerCase();
+    if (/email/.test(key)) return "bonjour@example.com";
+    if (/url|site|website|lien/.test(key)) return "https://example.com/offre-solaire";
+    if (/phone|tel|mobile/.test(key)) return "0612345678";
+    if (/ville|city|localisation|location|region|departement|postal/.test(key)) return "Paris";
+    if (/orientation/.test(key)) return "sud";
+    if (/keyword|theme|topic|sujet|subject/.test(key)) return "energie solaire domestique";
+    if (/titre|title/.test(key)) return "Simulateur solaire maison";
+    if (/nom|name|project/.test(key)) return "Projet Horizon";
+    if (/description|notes|content|message/.test(key)) return "Maison individuelle exposee sud avec toiture exploitable.";
+    return field.placeholder || "France";
+  }
+
+  function sampleNumber(field) {
+    const key = `${field.id || ""} ${field.name || ""}`.toLowerCase();
+    if (/inclinaison|angle|slope/.test(key)) return "30";
+    if (/surface|size|m2|sqm/.test(key)) return "28";
+    if (/annee|year/.test(key)) return "2024";
+    if (/prix|price|budget|cost|amount|montant/.test(key)) return "12000";
+    const min = Number(field.min || "");
+    const max = Number(field.max || "");
+    if (Number.isFinite(min) && Number.isFinite(max) && max >= min) {
+      return String(Math.min(max, Math.max(min, min + Math.round((max - min) * 0.35))));
+    }
+    if (Number.isFinite(min)) return String(Math.max(min, 12));
+    if (Number.isFinite(max)) return String(Math.min(max, 12));
+    return field.value || "12";
+  }
+
+  function applySample(field) {
+    const tag = (field.tagName || "").toLowerCase();
+    const type = (field.type || "").toLowerCase();
+    if (field.disabled) return;
+    if (type === "hidden" || type === "submit" || type === "button" || type === "reset" || type === "image" || type === "file") {
+      return;
+    }
+    const currentValue = normalize(field.value);
+    if (tag === "select") {
+      if (currentValue) return;
+      const option = Array.from(field.options || []).find((item) => item.value && !item.disabled) || field.options[0];
+      if (option) field.value = option.value;
+      return;
+    }
+    if (type === "checkbox") {
+      if (field.checked) return;
+      field.checked = true;
+      return;
+    }
+    if (type === "radio") {
+      if (field.checked) return;
+      field.checked = true;
+      return;
+    }
+    if (type === "date") {
+      if (currentValue) return;
+      field.value = "2026-03-01";
+      return;
+    }
+    if (type === "email") {
+      if (currentValue) return;
+      field.value = "bonjour@example.com";
+      return;
+    }
+    if (type === "url") {
+      if (currentValue) return;
+      field.value = "https://example.com/offre-solaire";
+      return;
+    }
+    if (type === "tel") {
+      if (currentValue) return;
+      field.value = "0612345678";
+      return;
+    }
+    if (type === "color") {
+      if (currentValue) return;
+      field.value = "#2f855a";
+      return;
+    }
+    if (type === "number" || type === "range") {
+      if (currentValue) return;
+      field.value = sampleNumber(field);
+      return;
+    }
+    if (currentValue) return;
+    field.value = sampleText(field);
+  }
+
+  function stamp(status, detail, headline, primary) {
+    if (qaFinished) return;
+    qaFinished = true;
+    if (qaWatchdog) {
+      window.clearTimeout(qaWatchdog);
+      qaWatchdog = null;
+    }
+    const node = marker();
+    node.dataset.status = status;
+    node.dataset.mode = "native-form";
+    node.dataset.detail = detail || "";
+    node.dataset.headline = headline || "";
+    node.dataset.primary = primary || "";
+    node.dataset.viewport = window.innerWidth <= 640 ? "mobile" : "desktop";
+    window.setTimeout(function () {
+      try {
+        window.stop();
+      } catch (_error) {}
+    }, 0);
+  }
+
+  function installModalGuards() {
+    const noop = function () {};
+    const approve = function () { return true; };
+    const empty = function () { return ""; };
+    try { window.alert = noop; } catch (_error) {}
+    try { window.confirm = approve; } catch (_error) {}
+    try { window.prompt = empty; } catch (_error) {}
+  }
+
+  function triggerAction(form, action) {
+    try {
+      if (typeof form.requestSubmit === "function") {
+        form.requestSubmit(action || undefined);
+        return;
+      }
+    } catch (_error) {}
+    if (action && typeof action.click === "function") {
+      action.click();
+      return;
+    }
+    form.dispatchEvent(new Event("submit", { bubbles: true, cancelable: true }));
+  }
+
+  function inspectResult(before, attemptsLeft) {
+    const result = findResult();
+    if (!result) {
+      stamp("fail", "La zone de resultat est introuvable.", "");
+      return;
+    }
+    const after = resultSignature(result);
+    const text = normalize(result.textContent);
+    if (after && after !== before && text.length >= 24) {
+      const primary = result.querySelector("a[href], button[data-href], [data-primary-url]") || document.querySelector("#tool-result a[href]");
+      stamp("pass", "Le formulaire natif a mis a jour la zone de resultat.", resultHeadline(result), primary ? (primary.getAttribute("href") || primary.getAttribute("data-primary-url") || "") : "");
+      return;
+    }
+    if (attemptsLeft > 0) {
+      window.setTimeout(function () {
+        inspectResult(before, attemptsLeft - 1);
+      }, 250);
+      return;
+    }
+    stamp("fail", "La zone de resultat n'a pas renvoye de contenu exploitable.", resultHeadline(result));
+  }
+
+  function runSmoke() {
+    const params = new URLSearchParams(window.location.search);
+    if (params.get("__qa") !== "functional") return;
+    qaWatchdog = window.setTimeout(function () {
+      stamp("fail", "QA smoke timed out before the page reported a usable result.", "");
+    }, 7000);
+    const form = findForm();
+    if (!form) {
+      stamp("fail", "Le formulaire principal est introuvable.", "");
+      return;
+    }
+    const result = findResult();
+    const before = resultSignature(result);
+    installModalGuards();
+    try {
+      form.querySelectorAll("input, select, textarea").forEach(applySample);
+    } catch (error) {
+      stamp("fail", error && error.message ? `QA smoke sample failed: ${error.message}` : "QA smoke sample failed before submit.", "");
+      return;
+    }
+    const action = primaryAction(form);
+    try {
+      triggerAction(form, action);
+    } catch (error) {
+      stamp("fail", error && error.message ? `QA smoke submit failed: ${error.message}` : "QA smoke submit failed.", "");
+      return;
+    }
+    inspectResult(before, 10);
+  }
+
+  window.addEventListener("error", function (event) {
+    const message = event && event.message ? event.message : "JavaScript runtime error during QA smoke.";
+    stamp("fail", `QA smoke JS error: ${message}`, "");
+  }, { once: true });
+
+  window.addEventListener("unhandledrejection", function (event) {
+    const reason = event && event.reason;
+    const detail = typeof reason === "string"
+      ? reason
+      : reason && reason.message
+        ? reason.message
+        : "Unhandled promise rejection during QA smoke.";
+    stamp("fail", `QA smoke rejection: ${detail}`, "");
+  }, { once: true });
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", function () {
+      window.setTimeout(runSmoke, 60);
+    }, { once: true });
+  } else {
+    window.setTimeout(runSmoke, 60);
+  }
+})();
+</script>
+</body>
+</html>
