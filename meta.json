@@ -1,23 +1,38 @@
 {
+  "slug": "generateur-de-plans-d-entrainement-personnalise-08f718ec",
   "name": "Générateur de Plans d'Entraînement Personnalisés CrossFit",
   "description": "Créez des plans d",
   "theme": "generator",
-  "design_theme": "signal-noir",
-  "structure_preset": "bento-signal",
-  "render_direction": "signal-bento",
-  "page_blueprint": "signal-matrix",
+  "design_theme": "imported-source",
+  "structure_preset": "external-source",
+  "render_direction": "imported-source",
+  "page_blueprint": "imported-source",
   "language": "fr",
   "country": "FR",
   "url": null,
   "expected_url": "https://generateur-de-plans-d-entrainement-personnalise-08f718ec.onrender.com",
-  "created": "2026-05-13T00:29:52.293022+00:00",
+  "created": "2026-05-17T15:42:17.588739+00:00",
   "owner_user_id": "user-1774822953462",
   "owner_username": "admin",
   "owner_display_name": "Administrator",
   "status": "generated",
-  "run_id": "run-1778632154107",
+  "run_id": "run-1779032490603",
   "publish_target": "render",
   "mode": "production",
+  "source_type": "imported",
+  "import_source_path": "/var/lib/utility-site-studio/data/growth-republish/growth-1779032435734/generateur-de-plans-d-entrainement-personnalise-08f718ec",
+  "import_root_path": "/var/lib/utility-site-studio/data/growth-republish/growth-1779032435734/generateur-de-plans-d-entrainement-personnalise-08f718ec",
+  "import_resolution_note": null,
+  "analysis": {
+    "model": "preserved-analysis",
+    "summary": "Créez des plans d",
+    "notes": "Growth module republish of an updated local artifact.",
+    "characteristics": [
+      "imported static site",
+      "ready file deploy",
+      "generator"
+    ]
+  },
   "github": {
     "status": "pending"
   },
@@ -28,13 +43,240 @@
     "status": "pending"
   },
   "features": [
-    "Hero pattern: command",
-    "Proof module: badges",
-    "Design theme: Signal Noir",
-    "Render direction: Signal Bento",
-    "Page blueprint: Signal Matrix",
-    "Runtime mode: document_generator",
-    "Generation mode: direct_html",
-    "Artifact rendered, awaiting QA and deployment"
-  ]
+    "Imported from ready static files",
+    "AI analysis model: preserved-analysis",
+    "imported static site",
+    "ready file deploy",
+    "generator"
+  ],
+  "growth": {
+    "affiliate": {
+      "status": "ready",
+      "updated_at": "2026-05-17T15:41:10.730940+00:00",
+      "modes": [
+        "plain_url_text"
+      ],
+      "links": 1,
+      "insertions": 1,
+      "review": {
+        "status": "pass",
+        "score": 84,
+        "summary": "A safer non-anchor URL block was applied near the bottom of the page with contextual copy.",
+        "issues": []
+      }
+    }
+  },
+  "ahrefs": {
+    "status": "ready",
+    "synced_at": "2026-05-13T02:56:40.206385+00:00",
+    "country": "FR",
+    "target_url": "https://generateur-de-plans-d-entrainement.onrender.com/",
+    "target_host": "generateur-de-plans-d-entrainement.onrender.com",
+    "current_live_url": "https://generateur-de-plans-d-entrainement.onrender.com",
+    "domain_rating": 89.0,
+    "ahrefs_rank": 1924,
+    "backlinks": 0,
+    "refdomains": 0,
+    "org_traffic": 0,
+    "org_keywords": 0,
+    "org_keywords_1_3": 0,
+    "org_keywords_4_10": 0,
+    "org_keywords_11_20": 0,
+    "org_keywords_21_50": 0,
+    "org_keywords_51_plus": 0,
+    "top_country": null,
+    "top_country_traffic": null,
+    "detail": "Ahrefs metrics synced via Batch Analysis.",
+    "shared_host": true,
+    "metrics_scope": "shared-host",
+    "shared_host_provider": "Render",
+    "shared_host_note": "Сайт живёт на Render shared host (generateur-de-plans-d-entrainement.onrender.com). DR и Ahrefs Rank в таком режиме частично отражают силу хост-домена, поэтому смотри в первую очередь на keywords, ref domains, traffic и top pages.",
+    "opportunity_score": 0,
+    "opportunity_band": "dormant",
+    "opportunity_label": "Dormant",
+    "opportunity_detail": "Ahrefs пока почти не видит самостоятельных SEO-сигналов у этого проекта. · shared-host: DR/AR смотри осторожно."
+  },
+  "previous_live_state": {
+    "url": "https://generateur-de-plans-d-entrainement.onrender.com",
+    "expected_url": "https://generateur-de-plans-d-entrainement.onrender.com",
+    "requested_url": "https://generateur-de-plans-d-entrainement.onrender.com",
+    "github": {
+      "status": "published",
+      "repo_name": "generateur-de-plans-d-entrainement-personnalise-08f718ec",
+      "repo_url": "https://github.com/olivkovyi/generateur-de-plans-d-entrainement-personnalise-08f718ec",
+      "updated_at": 1778632234
+    },
+    "deployment": {
+      "status": "ready",
+      "provider": "render",
+      "service_id": "srv-d81sd650lvsc73bug4j0",
+      "project_name": "generateur-de-plans-d-entrainement-personnalise-08f718ec",
+      "requested_project_name": null,
+      "deployment_id": "dep-d81sd6d0lvsc73bug4o0",
+      "deployment_url": "https://generateur-de-plans-d-entrainement.onrender.com",
+      "public_url": "https://generateur-de-plans-d-entrainement.onrender.com",
+      "expected_public_url": "https://generateur-de-plans-d-entrainement.onrender.com",
+      "dashboard_url": "https://dashboard.render.com/static/srv-d81sd650lvsc73bug4j0",
+      "ready_state": "live",
+      "target": "production",
+      "updated_at": 1778632251,
+      "requested_public_url": "https://generateur-de-plans-d-entrainement.onrender.com",
+      "url_source": "alias"
+    },
+    "qa": {
+      "status": "pass",
+      "local": {
+        "status": "pass",
+        "checks": [
+          {
+            "name": "index_exists",
+            "status": "pass",
+            "detail": "index.html exists"
+          },
+          {
+            "name": "meta_exists",
+            "status": "pass",
+            "detail": "meta.json exists"
+          },
+          {
+            "name": "robots_exists",
+            "status": "pass",
+            "detail": "robots.txt exists"
+          },
+          {
+            "name": "has_title",
+            "status": "pass",
+            "detail": "HTML contains a title tag"
+          },
+          {
+            "name": "has_viewport",
+            "status": "pass",
+            "detail": "HTML contains a mobile viewport meta tag"
+          },
+          {
+            "name": "has_canonical",
+            "status": "pass",
+            "detail": "HTML contains a canonical URL"
+          },
+          {
+            "name": "bundle_size",
+            "status": "pass",
+            "detail": "Generated HTML stays below 250KB"
+          },
+          {
+            "name": "functional_qa_hook",
+            "status": "pass",
+            "detail": "Generated HTML includes the browser QA hook used before deploy."
+          },
+          {
+            "name": "inline_script_syntax",
+            "status": "pass",
+            "detail": "Inline JavaScript syntax check passed."
+          },
+          {
+            "name": "robots_google_only",
+            "status": "pass",
+            "detail": "robots.txt allows only Google crawlers and blocks all other bots."
+          },
+          {
+            "name": "no_meta_noindex",
+            "status": "pass",
+            "detail": "Generated HTML does not inject a noindex robots meta tag."
+          },
+          {
+            "name": "no_internal_branding",
+            "status": "pass",
+            "detail": "Generated site does not leak internal platform branding or internal product naming."
+          },
+          {
+            "name": "desktop_layout_overlap",
+            "status": "pass",
+            "detail": "Editorial desktop layout avoids negative overlap offsets on the tool panel"
+          }
+        ],
+        "checked_at": 1779032472
+      },
+      "functional": {
+        "status": "pass",
+        "detail": "desktop: Le formulaire natif a mis a jour la zone de resultat. | mobile: Le formulaire natif a mis a jour la zone de resultat.",
+        "target_url": "http://127.0.0.1:46495/index.html?__qa=functional",
+        "mode": "native-form",
+        "headline": "Votre WOD sur mesure",
+        "primary_url": "",
+        "desktop": {
+          "status": "pass",
+          "detail": "Le formulaire natif a mis a jour la zone de resultat.",
+          "target_url": "http://127.0.0.1:46495/index.html?__qa=functional",
+          "viewport": "desktop",
+          "mode": "native-form",
+          "headline": "Votre WOD sur mesure",
+          "primary_url": "",
+          "reported_viewport": "desktop",
+          "updated_at": 1779032473
+        },
+        "mobile": {
+          "status": "pass",
+          "detail": "Le formulaire natif a mis a jour la zone de resultat.",
+          "target_url": "http://127.0.0.1:46495/index.html?__qa=functional",
+          "viewport": "mobile",
+          "mode": "native-form",
+          "headline": "Votre WOD sur mesure",
+          "primary_url": "",
+          "reported_viewport": "mobile",
+          "updated_at": 1779032473
+        },
+        "updated_at": 1779032474
+      },
+      "remote": {
+        "status": "pass",
+        "checks": [
+          {
+            "name": "remote_200",
+            "status": "pass",
+            "detail": "Remote deployment returned HTTP 200"
+          },
+          {
+            "name": "remote_title",
+            "status": "pass",
+            "detail": "Remote HTML contains a title tag"
+          },
+          {
+            "name": "remote_body",
+            "status": "pass",
+            "detail": "Remote HTML contains a body tag"
+          }
+        ],
+        "checked_at": 1779032474
+      },
+      "visual": {
+        "status": "pass",
+        "desktop": {
+          "status": "pass",
+          "path": "/var/lib/utility-site-studio/static/generated-qa/generateur-de-plans-d-entrainement-personnalise-08f718ec/generateur-de-plans-d-entrainement-personnalise-08f718ec-desktop.png",
+          "detail": "1440x960 screenshot captured.",
+          "relative_url": "/static/generated-qa/generateur-de-plans-d-entrainement-personnalise-08f718ec/generateur-de-plans-d-entrainement-personnalise-08f718ec-desktop.png"
+        },
+        "mobile": {
+          "status": "pass",
+          "path": "/var/lib/utility-site-studio/static/generated-qa/generateur-de-plans-d-entrainement-personnalise-08f718ec/generateur-de-plans-d-entrainement-personnalise-08f718ec-mobile.png",
+          "detail": "430x932 screenshot captured.",
+          "relative_url": "/static/generated-qa/generateur-de-plans-d-entrainement-personnalise-08f718ec/generateur-de-plans-d-entrainement-personnalise-08f718ec-mobile.png"
+        },
+        "updated_at": 1779032476
+      },
+      "lighthouse": {
+        "status": "pass",
+        "scores": {
+          "performance": 100,
+          "accessibility": 94,
+          "best-practices": 96,
+          "seo": 100
+        },
+        "report_path": "/var/lib/utility-site-studio/data/qa/lighthouse/generateur-de-plans-d-entrainement-personnalise-08f718ec-lighthouse.json",
+        "updated_at": 1779032490
+      },
+      "qa_live_url": "https://generateur-de-plans-d-entrainement.onrender.com",
+      "updated_at": "2026-05-17T15:41:30.393454+00:00"
+    }
+  }
 }
