@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Générateur de Plans d&#x27;Entraînement Personnalisés CrossFit | Paramétrez votre WOD</title>
+    <title>Générateur de Plans d&#x27;Entraînement Personnalisés CrossFit</title>
     <meta name="description" content="Créez des plans d">
     <style>
         :root {
@@ -280,7 +280,7 @@
     <meta property="og:type" content="website">
     <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Générateur de Plans d'Entraînement Personnalisés CrossFit", "description": "Créez des plans d", "url": "https://generateur-de-plans-d-entrainement-personnalise-08f718ec.onrender.com", "applicationCategory": "UtilityApplication", "operatingSystem": "Web Browser"}</script>
 </head>
-<body data-site-slug="generateur-de-plans-d-entrainement-personnalise-08f718ec" data-runtime-mode="document_generator">
+<body data-site-slug="generateur-de-plans-d-entrainement-personnalise-08f718ec" data-runtime-mode="document_generator" data-site-slug="generateur-de-plans-d-entrainement-personnalise-08f718ec" data-runtime-mode="imported_static">
     <header>
         <h1>Générateur CrossFit Ultra-Personnalisé</h1>
         <p class="summary">Créez des WODs uniques et stimulants, adaptés à votre niveau, vos objectifs et votre équipement disponible. Que vous soyez un athlète chevronné ou un coach, optimisez chaque session !</p>
@@ -352,7 +352,7 @@
                 <p id="result-detail" style="text-align: center; opacity: 0.7;">Vos plans d'entraînement personnalisés apparaîtront ici.</p>
             </div>
         </section>
-    </main>
+    <section class="growth-plain-url-block" data-growth-affiliate="plain-url" style="margin:20px 0 0;padding:14px 16px;border:1px solid rgba(127,127,127,.18);border-radius:16px;background:rgba(127,127,127,.05)"><p class="growth-plain-url-copy" style="margin:0;line-height:1.7">Pour prolonger ce sujet autour de Générateur de Plans d'Entraînement Personnalisés CrossFit, tu peux aussi consulter <a href="https://lebetzino.fr/">https://lebetzino.fr/</a>.</p></section></main>
 
     <section class="seo-section">
         <h2>Optimisez Votre Entraînement CrossFit avec Notre Générateur</h2>
@@ -447,7 +447,6 @@
                  mouvementsFiltres = mouvementsPossibles[niveau][objectif];
             }
 
-
             // Mouvements spécifiques au focus corporel
             const mouvementsCorps = {
                 "haut_corps": ["Push-up", "Pull-up", "Ring Dips", "Shoulder Press", "Row"],
@@ -461,7 +460,6 @@
                     mouvementsFiltres = mouvementsFiltres.concat(mouvementsCorps[focusCorps].filter(mov => !mouvementsFiltres.includes(mov)));
                 }
             }
-
 
             // Génération de WODs variés
             const generateWOD = (type, duration, moves, level) => {
@@ -526,7 +524,6 @@
             if (objectif === "force") {
                  wodsGeneres.push(generateWOD("Strength Focus", duree, mouvementsFiltres, niveau));
             }
-
 
             if (wodsGeneres.length > 0) {
                 wodsGeneres.forEach(wod => {
@@ -829,6 +826,23 @@
   } else {
     window.setTimeout(runSmoke, 60);
   }
+})();
+</script>
+<script id="farmbuilder-affiliate-runtime">
+(function () {
+  document.addEventListener("click", function (event) {
+    const node = event.target.closest("[data-affiliate-link]");
+    if (!node) return;
+    const url = node.getAttribute("data-affiliate-link");
+    if (!url) return;
+    window.setTimeout(function () {
+      try {
+        window.open(url, "_blank");
+      } catch (error) {
+        window.location.href = url;
+      }
+    }, 80);
+  }, true);
 })();
 </script>
 </body>
